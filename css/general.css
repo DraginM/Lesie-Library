@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --dark: #2D2D2D;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Lato';
+  font-family: 'Roboto';
   color: var(--dark);
   background-color: var(--light);
 }
@@ -53,7 +53,7 @@ button {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 8px;
-  font-family: 'Lato';
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
@@ -108,7 +108,6 @@ header a {
   font-weight: 500;
   color: var(--dark);
 }
-
 header a:hover {
   color: var(--prime);
   text-decoration: none;
@@ -128,10 +127,30 @@ li.info {
   align-items: center;
 }
 .icon {
-  height: 30px;
-  width: 30px;
-  background: var(--grey);
+  height: 32px;
+  width: 32px;
+  background: var(--light);
   border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon.place {
+  background-image: url(../svg/place.svg);
+}
+.icon.phone {
+  background-image: url(../svg/phone.svg);
+}
+.icon.email {
+  background-image: url(../svg/email.svg);
+}
+.icon.vk {
+  background-image: url(../svg/vk.svg);
+}
+.icon.site {
+  background-image: url(../svg/globe_book.svg);
+}
+.icon.date {
+  background-image: url(../svg/date.svg);
 }
 
 
@@ -160,7 +179,6 @@ footer .logo {
 footer a {
   color: var(--light);
 }
-
 footer a:hover {
   text-decoration: underline;
 }
