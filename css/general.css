@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --dark: #2D2D2D;
+    --grey: #9E9E9E;
+    --light: #F9F6F0;
+    --prime: #8B5E3C;
+    --primeX: #A67C52;
+    --secc: #68BFEA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato';
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+}
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+
+
+ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--prime);
+  transition: all 0.3s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Lato';
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.prime {
+  background-color: var(--prime);
+  color: white;
+}
+.prime:hover {
+  background-color: var(--primeX);
+}
+
+.secc {
+  background-color: transparent;
+  color: var(--prime);
+  border: 2px solid var(--prime);
+}
+.secc:hover {
+  background-color: var(--light);
+  color: var(--primeX);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 40px;
+}
+
+
+
+header {
+  background-color: white;
+  padding: 24px 0;
+  box-shadow: 0 2px 4px var(--grey);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--prime);
+}
+
+header a {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+header a:hover {
+  color: var(--prime);
+  text-decoration: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+li.info {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  background: var(--grey);
+  border-radius: 100%;
+}
+
+
+
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 24px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .logo {
+  color: var(--light);
+}
+
+footer a {
+  color: var(--light);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}

@@ -1,0 +1,109 @@
+section {
+  padding: 24px 0;
+}
+
+
+
+.hero {
+  position: relative;
+  background: white;
+  padding: 150px 0;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  background: url('../png/books.png');
+  background-size: 350px;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero h1 {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.book-card {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.event-card {
+  background: var(--light-bg);
+  padding: 1rem;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+
+
+.contacts .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contacts .main {
+  display: flex;
+  justify-content: space-around;
+}
+.contacts .left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contacts .left  .map {
+  background: var(--grey);
+  height: 400px;
+  width: 600px;
+  border-radius: 8px;
+}
+.contacts .right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+.contacts .right ul {
+  flex-direction: column;
+
+}
