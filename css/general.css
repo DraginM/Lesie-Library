@@ -22,12 +22,9 @@ html {
 body {
   font-family: 'Roboto';
   color: var(--dark);
-  background-color: var(--light);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: 'Playfair Display';
   font-weight: 600;
 }
@@ -91,10 +88,11 @@ ul a:hover {
 
 .prime:hover {
   background-color: var(--primeX);
+  text-decoration: none;
 }
 
 .secc {
-  background-color: transparent;
+  background-color: white;
   color: var(--prime);
   border: 2px solid var(--prime);
 }
@@ -102,6 +100,7 @@ ul a:hover {
 .secc:hover {
   background-color: var(--light);
   color: var(--primeX);
+  text-decoration: none;
 }
 
 input {
@@ -135,7 +134,25 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
+section:nth-child(odd) {
+  background-color: var(--light);
+}
 
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--secc);
+}
+
+.logo {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--prime);
+}
+.logo:hover {
+  text-decoration: none;
+}
 
 header {
   background-color: white;
@@ -144,13 +161,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-}
-
-.logo {
-  font-family: 'Playfair Display';
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--prime);
 }
 
 header .container {
@@ -170,7 +180,6 @@ li.info {
 .icon {
   height: 32px;
   width: 32px;
-  background: var(--light);
   border-radius: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -218,6 +227,10 @@ footer .container {
   gap: 24px;
 }
 
+footer hr {
+  background-color: var(--light);
+}
+
 footer .top {
   display: flex;
   justify-content: space-between;
@@ -227,12 +240,17 @@ footer .logo {
   color: var(--light);
 }
 
+footer .icon {
+  background-color: var(--light);
+}
+
 footer a {
   color: var(--light);
 }
 
 footer a:hover {
   text-decoration: underline;
+  color: var(--light);
 }
 
 footer .bottom {

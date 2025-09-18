@@ -4,6 +4,7 @@
   padding: 150px 0;
   text-align: center;
 }
+
 .hero::before {
   content: "";
   position: absolute;
@@ -17,6 +18,7 @@
   pointer-events: none;
   z-index: 0;
 }
+
 .hero .container {
   position: relative;
   z-index: 1;
@@ -27,37 +29,64 @@
 }
 
 .hero h1 {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 .hero p {
   font-size: 18px;
   max-width: 700px;
-  margin: 0 auto 24px;
 }
 
 
 
-.books {
-  background: white;
-}
-
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
-    gap: 24px;
-    margin: 24px 0;
+.about .container{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 
-.event-list {
+
+.docs .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.docs ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.books .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+}
+
+.books-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 24px;
 }
 
-.event-card {
+
+
+.news .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+}
+.news-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.new {
   background: var(--light-bg);
   padding: 1rem;
   border-left: 4px solid var(--secondary-color);
@@ -66,20 +95,27 @@
 
 
 
-.contacts {
-  background: white;
+.ask .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
 }
+
+
+
 .contacts .container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  align-items: center;
 }
+
 .contacts .main {
   display: flex;
-  gap: 48px;
+  justify-content: space-between;
   align-items: center;
 }
+
 .contacts .map {
   background: var(--grey) url(../png/map.png);
   background-size: cover;
@@ -88,20 +124,34 @@
   border: 2px solid var(--secc);
   border-radius: 8px;
 }
+
 .contacts ul {
   flex-direction: column;
 }
+
 .contacts .icon {
-  background-color: white;
+  background-color: var(--light);
 }
+
 .contacts span {
   font-weight: 500;
 }
+
 .contacts a {
   font-weight: 500;
   color: var(--dark);
 }
+
 .contacts a:hover {
   color: var(--prime);
   text-decoration: none;
+}
+
+.contacts .block {
+  background: var(--grey);
+  background-size: cover;
+  height: 400px;
+  width: 260px;
+  border: 2px solid var(--secc);
+  border-radius: 8px;
 }
