@@ -9,6 +9,8 @@
   --secc: #68BFEA;
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +44,7 @@ h3 {
 }
 
 
+
 ul {
   display: flex;
   gap: 24px;
@@ -67,6 +70,8 @@ ul a:hover {
   color: var(--prime);
   text-decoration: none;
 }
+
+
 
 .btn {
   display: inline-block;
@@ -118,6 +123,8 @@ input:focus-visible {
   outline: none;
 }
 
+
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -145,18 +152,19 @@ hr {
 }
 
 .logo {
-  font-family: 'Playfair Display';
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--prime);
+  height: 82px;
+  width: 132px;
+  background-image: url(../png/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.logo:hover {
-  text-decoration: none;
-}
+
+
 
 header {
   background-color: white;
-  padding: 24px 0;
+  padding: 8px 0;
   box-shadow: 0 2px 4px var(--grey);
   position: sticky;
   top: 0;
@@ -237,7 +245,7 @@ footer .top {
 }
 
 footer .logo {
-  color: var(--light);
+  background-image: url(../png/logo-dark.png);
 }
 
 footer .icon {
@@ -256,5 +264,10 @@ footer a:hover {
 footer .bottom {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
   opacity: 0.8;
+}
+
+footer .bottom ul {
+  width: 55%;
 }
