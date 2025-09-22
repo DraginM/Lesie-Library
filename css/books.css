@@ -72,7 +72,7 @@
     font-size: 18px;
 }
 
-.main .right .books {
+.main .right .books-list {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));

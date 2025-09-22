@@ -20,6 +20,7 @@
     object-fit: cover;
     background-color: var(--grey);
     margin: 0 auto;
+    border: none;
 }
 
 .book .name {
@@ -39,4 +40,40 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+
+
+.modal {
+    position: fixed; 
+    top: 55%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background: white; 
+    padding: 24px; 
+    border-radius: 8px; 
+    border: 2px solid var(--prime);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 99; 
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal .top {
+    display: flex;
+    gap: 24px;
+}
+
+.modal img {
+    width: 210px;
+    height: 300px;
+    border: none;
+}
+
+.modal .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лезьенская библиотека</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/admin-books.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="./index.html"></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a href="./books.html">Книги</a></li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="./history.html">Краеведенье</a></li>
+                    <li><a href="https://vk.com/im?sel=-210271759&entrypoint=community_page">Справка</a></li>
+                    <li><a href="./index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="btn secc icon menu"></button>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a href="./books.html">Книги</a></li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="./history.html">Краеведенье</a></li>
+                    <li><a href="https://vk.com/im?sel=-210271759&entrypoint=community_page">Справка</a></li>
+                    <li><a href="./index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="container">
+            <h2>Добавить книгу</h2>
+            <form id="bookForm" class="modal">
+                <div class="top">
+                    <img src="" alt="">
+                    <div class="text">
+                        <input type="text" name="title" placeholder="Название" required>
+                        <input type="text" name="author" placeholder="Автор" required>
+                        <input type="number" name="year" placeholder="Год">
+                        <input type="text" name="publisher" placeholder="Издательство">
+                        <input type="text" name="genres" placeholder="Жанры (через запятую)">
+                        <input type="text" name="shelf" placeholder="Полка">
+                        <input type="text" name="isbn" placeholder="ISBN">
+                        <input type="number" name="position" placeholder="Номер в картотеке">
+                        <select name="status">
+                            <option value="В библиотеке">В библиотеке</option>
+                            <option value="На руках">На руках</option>
+                            <option value="Ремонт">Ремонт</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea name="description" placeholder="Описание"></textarea>
+                <button class="btn secc" type="submit">Добавить и скачать JSON</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('bookForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const newBook = {
+                id: Date.now(),
+                cover: "",
+                title: form.title.value,
+                author: form.author.value,
+                year: parseInt(form.year.value) || null,
+                publisher: form.publisher.value,
+                genres: form.genres.value.split(',').map(g => g.trim()).filter(g => g),
+                shelf: form.shelf.value,
+                description: form.description.value,
+                position: parseInt(form.position.value) || null,
+                isbn: form.isbn.value,
+                status: form.status.value
+            };
+
+            fetch('./data/books.json')
+                .then(r => r.json())
+                .then(books => {
+                    books.push(newBook);
+                    const blob = new Blob([JSON.stringify(books, null, 2)], { type: 'application/json' });
+                    saveAs(blob, 'books.json');
+                    alert('Файл books.json готов к замене! Скачайте и замените в папке /data');
+                });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="top">
+                <a class="logo" href="./index.html"></a>
+                <ul>
+                    <li class="info">
+                        <div class="icon phone"></div>
+                        <a href="tel:+7 (81362) 2-02-06">+7 (81362) 2-02-06</a>
+                    </li>
+                    <li class="info">
+                        <div class="icon email"></div>
+                        <a href="mailto:Lezyelib@yandex.ru">Lezyelib@yandex.ru</a>
+                    </li>
+                    <li class="info">
+                        <div class="icon vk"></div>
+                        <a href="https://vk.com/lezye_biblioteka">ВКонтакте</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="bottom">
+                <span>© 2025 МКУК «Центральная межпоселенческая библиотека»</span>
+                <ul>
+                    <li><a href="./pdf/1_Правила пользования библиотеками_2023g_.pdf">Правила пользования библиотеками</a></li>
+                    <li><a href="./pdf/2_Положение о библиотеке_структурном подразделении.pdf">Положение о библиотеке структкрном подразделении</a></li>
+                    <li><a href="./pdf/3_Положение о защите персональных данных пользователей МКУК ЦМБ.pdf">Положение о защите персональных данных</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

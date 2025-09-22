@@ -33,7 +33,7 @@
 
 .poll-options label {
   padding: 0.5rem;
-  background: #F9F6F0;
+  background: var(--light);
   border-radius: 8px;
   cursor: pointer;
 }

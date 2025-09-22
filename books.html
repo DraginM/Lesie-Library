@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/books.css">
     <link rel="stylesheet" href="./css/book-card.css">
 </head>
-
+<script src="./js/mobile-menu.js" defer></script>
+<script src="./js/books-loader.js" defer></script>
 <body>
     <header>
         <div class="container">
@@ -28,6 +29,22 @@
             <button class="btn secc icon menu"></button>
         </div>
     </header>
+
+    <div class="mobile-menu">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a href="./books.html">Книги</a></li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="./history.html">Краеведенье</a></li>
+                    <li><a href="https://vk.com/im?sel=-210271759&entrypoint=community_page">Справка</a></li>
+                    <li><a href="./index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     <section id="main" class="main">
         <div class="container">
@@ -61,7 +78,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="books">
+                <div class="books-list">
                     <div class="book">
                         <img src="" alt="">
                         <span class="name">Прекрасное название</span>

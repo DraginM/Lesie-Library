@@ -161,6 +161,14 @@
     display: none;
 }
 
+.news .posts .post {
+  background-color: var(--light);
+}
+
+.news .posts .post .poll-options label {
+  background-color: white;
+}
+
 @media (max-width: 1103px) {
     .posts > *:nth-child(n+4) {
         display: flex;
