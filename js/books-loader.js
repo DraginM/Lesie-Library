@@ -58,5 +58,4 @@ function openBookModal(book) {
     document.body.appendChild(modal);
 }
 
-
 document.addEventListener('DOMContentLoaded', loadBooks);
