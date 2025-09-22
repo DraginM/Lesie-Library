@@ -6,7 +6,6 @@
     border-radius: 8px;
     padding: 16px;
     width: 100%;
-    max-width: 192px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -17,9 +16,10 @@
 
 .book img {
     height: 228px;
-    width: 100%;
+    width: 160px;
     object-fit: cover;
     background-color: var(--grey);
+    margin: 0 auto;
 }
 
 .book .name {

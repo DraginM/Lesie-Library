@@ -1,0 +1,48 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 0 0 2px var(--prime);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.post img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.poll-options label {
+  padding: 0.5rem;
+  background: #F9F6F0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.poll-options input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.post time {
+    color: var(--prime);
+    text-align: end;
+}

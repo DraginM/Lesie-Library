@@ -1,70 +1,103 @@
 .hero {
-  position: relative;
-  background: white;
-  padding: 150px 0;
-  text-align: center;
+    position: relative;
+    background: white;
+    padding: 150px 0;
+    text-align: center;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.3;
-  background: url('../png/books.png');
-  background-size: 350px;
-  pointer-events: none;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    background: url('../png/books.png');
+    background-size: 350px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero .container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero h1 {
-  text-shadow: 0 0 8px var(--light);
+    text-shadow: 0 0 8px var(--light);
 }
 
 .hero p {
-  font-size: 18px;
-  max-width: 700px;
+    font-size: 18px;
+    max-width: 700px;
 }
 
 
 
-.about .container{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.about .container {
+    flex-direction: row;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 360px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    background-color: var(--grey);
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-image blockquote {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Playfair Display';
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    font-size: 18px;
+    color: var(--prime);
+}
+
+@media (max-width: 1000px) {
+    .about .container {
+        flex-direction: column;
+    }
+    .about-image {
+        width: 100%;
+    }
 }
 
 
 
-.docs .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 .docs ul{
   display: flex;
   justify-content: space-between;
 }
 
 
-
-.books .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: start;
-}
 
 .books-list {
   display: grid;
@@ -74,40 +107,18 @@
 
 
 
-.news .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: start;
-}
-.news-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.new {
-  background: var(--light-bg);
-  padding: 1rem;
-  border-left: 4px solid var(--secondary-color);
-  border-radius: var(--border-radius);
-}
-
-
-
-.ask .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: start;
+.posts {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 0 8px;
 }
 
 
 
 .contacts .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  align-items: normal;
 }
 
 .contacts .main {
@@ -130,7 +141,7 @@
 }
 
 .contacts .icon {
-  background-color: var(--light);
+  background-color: white;
 }
 
 .contacts span {

@@ -16,18 +16,20 @@
             <a class="logo" href="./index.html"></a>
             <nav>
                 <ul>
-                    <li><a href="#hero">Главная</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#books">Книги</a></li>
-                    <li><a href="#news">Новости</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a href="./books.html">Книги</a></li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="./history.html">Краеведенье</a></li>
+                    <li><a href="https://vk.com/im?sel=-210271759&entrypoint=community_page">Справка</a></li>
+                    <li><a href="./index.html#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section>
-        <div class="main container">
+    <section id="main" class="main">
+        <div class="container">
             <div class="left">
                 <ul class="genres">
                     <li><a href="">Жанр книги</a></li>
@@ -45,13 +47,13 @@
                 </ul>
             </div>
             <div class="right">
-                <div class="sort">
-                    <ul>
-                        <li><a href="">От А до Я</a></li>
-                        <li><a href="">От Я до А</a></li>
-                        <li><a href="">Новые</a></li>
-                        <li><a href="">Старые</a></li>
-                    </ul>
+                <div class="filter">
+                    <div class="sort">
+                        <button class="btn prime">От А до Я</button>
+                        <button class="btn prime">От Я до А</button>
+                        <button class="btn prime">Новые</button>
+                        <button class="btn prime">Старые</button>
+                    </div>
                     <div class="search-wrap">
                         <div class="icon search"></div>
                         <input type="text" placeholder="Поиск">
@@ -111,10 +113,12 @@
                     </div>
                 </div>
                 <hr>
-                <ul>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">&raquo;</a></li>
                 </ul>
             </div>
         </div>

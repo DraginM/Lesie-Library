@@ -91,6 +91,11 @@ ul a:hover {
   color: white;
 }
 
+.prime.active {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 .prime:hover {
   background-color: var(--primeX);
   text-decoration: none;
@@ -100,6 +105,11 @@ ul a:hover {
   background-color: white;
   color: var(--prime);
   border: 2px solid var(--prime);
+}
+
+.secc.active {
+  border-color: var(--dark);
+  color: var(--dark);
 }
 
 .secc:hover {
@@ -125,29 +135,34 @@ input:focus-visible {
 
 
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 40px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 section {
   padding: 24px 0;
 }
 
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 98px;
 }
 
 section:nth-child(odd) {
   background-color: var(--light);
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+}
+
 hr {
   border: none;
   height: 2px;
+  width: 100%;
   background-color: var(--secc);
 }
 
@@ -172,7 +187,7 @@ header {
 }
 
 header .container {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -230,9 +245,7 @@ footer {
 }
 
 footer .container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  align-items: normal;
 }
 
 footer hr {
