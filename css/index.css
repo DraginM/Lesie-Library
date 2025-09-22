@@ -56,12 +56,7 @@
 }
 
 .about-image img {
-    width: 100%;
     height: 400px;
-    background-color: var(--grey);
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .about-image blockquote {
@@ -87,22 +82,69 @@
     }
     .about-image {
         width: 100%;
+        min-width: 0;
     }
 }
 
 
 
-.docs ul{
-  display: flex;
-  justify-content: space-between;
+.docs ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.doc-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--light);
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.doc-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    color: var(--prime);
+    text-decoration: none;
+}
+
+.docs .icon.doc {
+  background-image: url(../svg/docs.svg);
 }
 
 
 
 .books-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 24px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 24px;
+    padding: 0 8px;
+}
+
+@media (max-width: 1360px) {
+    .books-list > *:nth-child(n+6) {
+        display: none;
+    }
+}
+
+@media (max-width: 1140px) {
+    .books-list > *:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media (max-width: 927px) {
+    .books-list > *:nth-child(n+5) {
+        display: flex;
+    }
 }
 
 
@@ -115,6 +157,94 @@
     padding: 0 8px;
 }
 
+.posts > *:nth-child(n+4) {
+    display: none;
+}
+
+@media (max-width: 1103px) {
+    .posts > *:nth-child(n+4) {
+        display: flex;
+    }
+}
+
+@media (max-width: 711px) {
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+
+
+.ask .container {
+    flex-direction: row;
+    align-items: normal;
+}
+
+.ask .ask-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.ask-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.ask-image img {
+    width: 400px;
+    height: 260px;
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 8px;
+    left: -36px;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Playfair Display';
+    font-style: italic;
+    color: var(--prime);
+    max-width: 105%;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+@media (max-width: 840px) {
+    .ask .container {
+        flex-direction: column;
+    }
+    .ask-image {
+      width: 100%;
+    }
+    .ask-image img {
+      width: 100%;
+    }
+    .speech-bubble {
+      left: 8px;
+      max-width: 96%;
+    }
+}
+
 
 
 .contacts .container {
@@ -123,17 +253,14 @@
 
 .contacts .main {
   display: flex;
+  gap: 24px;
   justify-content: space-between;
   align-items: center;
 }
 
 .contacts .map {
-  background: var(--grey) url(../png/map.png);
-  background-size: cover;
   height: 400px;
   width: 600px;
-  border: 2px solid var(--secc);
-  border-radius: 8px;
 }
 
 .contacts ul {
@@ -142,6 +269,18 @@
 
 .contacts .icon {
   background-color: white;
+}
+
+.contacts .icon.place {
+  background-image: url(../svg/place.svg);
+}
+
+.contacts .icon.site {
+  background-image: url(../svg/globe_book.svg);
+}
+
+.contacts .icon.date {
+  background-image: url(../svg/date.svg);
 }
 
 .contacts span {
@@ -159,10 +298,41 @@
 }
 
 .contacts .block {
-  background: var(--grey);
-  background-size: cover;
   height: 400px;
   width: 260px;
-  border: 2px solid var(--secc);
-  border-radius: 8px;
+}
+
+@media (max-width: 1240px) {
+  .contacts ul {
+    margin-right: 8%;
+  }
+  .contacts .block {
+    display: none;
+  }
+}
+
+@media (max-width: 1060px) {
+  .contacts .main {
+    flex-direction: column;
+  }
+  .contacts .map {
+    width: 100%;
+  }
+  .contacts ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .contacts ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 630px) {
+  .contacts ul {
+    display: flex;
+  }
 }

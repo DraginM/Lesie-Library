@@ -24,6 +24,7 @@
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
+            <button class="btn secc icon menu"></button>
         </div>
     </header>
 
@@ -65,16 +66,31 @@
     </section>
 
     <section id="docs" class="docs">
-        <div class="container">
-            <h2>Документация</h2>
-            <p>Правила нашей библиотеки и важная информация</p>
-            <ul>
-                <li><a href="./pdf/1_Правила пользования библиотеками_2023g_.pdf">Правила пользования библиотеками</a></li>
-                <li><a href="./pdf/2_Положение о библиотеке_структурном подразделении.pdf">Положение о библиотеке структкрном подразделении</a></li>
-                <li><a href="./pdf/3_Положение о защите персональных данных пользователей МКУК ЦМБ.pdf">Положение о защите персональных данных</a></li>
-            </ul>
-        </div>
-    </section>
+    <div class="container">
+        <h2>Документация</h2>
+        <p>Правила нашей библиотеки и важная информация</p>
+        <ul>
+            <li>
+                <a href="./pdf/1_Правила пользования библиотеками_2023g_.pdf" class="doc-card">
+                    <div class="icon doc"></div>
+                    Правила пользования библиотеками
+                </a>
+            </li>
+            <li>
+                <a href="./pdf/2_Положение о библиотеке_структурном подразделении.pdf" class="doc-card">
+                    <div class="icon doc"></div>
+                    Положение о библиотеке
+                </a>
+            </li>
+            <li>
+                <a href="./pdf/3_Положение о защите персональных данных пользователей МКУК ЦМБ.pdf" class="doc-card">
+                    <div class="icon doc"></div> 
+                    Положение о защите персональных данных
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
 
     <section id="books" class="books">
         <div class="container">
@@ -142,6 +158,12 @@
                     <p>Проверьте свою эрудицию — 10 вопросов, 3 минуты!</p>
                     <time>8 июня 2025</time>
                 </article>
+                <article class="post post-news">
+                    <img src="news-thumb.jpg" alt="Выставка редких книг" class="post-image">
+                    <h3>Открытие выставки редких книг</h3>
+                    <p>Приглашаем всех желающих на открытие выставки “Книги, которые пережили века”.</p>
+                    <time>5 июня 2025</time>
+                </article>
             </div>
             <a class="btn secc" href="./news.html">Все мероприятия</a>
         </div>
@@ -173,6 +195,12 @@
                     <p>Проверьте свою эрудицию — 10 вопросов, 3 минуты!</p>
                     <time>8 июня 2025</time>
                 </article>
+                <article class="post post-news">
+                    <img src="news-thumb.jpg" alt="Выставка редких книг" class="post-image">
+                    <h3>Открытие выставки редких книг</h3>
+                    <p>Приглашаем всех желающих на открытие выставки “Книги, которые пережили века”.</p>
+                    <time>5 июня 2025</time>
+                </article>
             </div>
             <a class="btn secc" href="./history.html">Узнать больше</a>
         </div>
@@ -180,9 +208,17 @@
 
     <section id="ask" class="ask">
         <div class="container">
-            <h2>Виртуальная справка</h2>
-            <p>Наша библиотека предоставляет бесплатную справочную службу. Мы выполняем запросы о наличии различных изданий и уточнению библиографических данных, тематические и фактографические запросы.</p>
-            <a href="https://vk.com/im?sel=-210271759&entrypoint=community_page" class="btn secc">Задать вопрос</a>
+            <div class="ask-text">
+                <h2>Виртуальная справка</h2>
+                <p>Наша библиотека предоставляет бесплатную справочную службу. Мы выполняем запросы о наличии различных изданий и уточнению библиографических данных, тематические и фактографические запросы.</p>
+                <a href="https://vk.com/im?sel=-210271759&entrypoint=community_page" class="btn prime">Задать вопрос</a>
+            </div>
+            <div class="ask-image">
+                <img src="./img/ask-illustration.png" alt="Справочная служба">
+                <div class="speech-bubble">
+                    “Спрашивайте — мы поможем найти любую книгу или ответ!”
+                </div>
+            </div>
         </div>
     </section>
 
@@ -190,7 +226,7 @@
         <div class="container">
             <h2>Свяжитесь с нами</h2>
             <div class="main">
-                <div class="map"></div>
+                <img class="map" src="./png/map.png" alt="Скриншот карты с меткой библиотеки">
                 <ul>
                     <li class="info">
                         <div class="icon place"></div>
@@ -217,7 +253,7 @@
                         <span>СБ: с 10:00 до 19:00</span>
                     </li>
                 </ul>
-                <div class="block"></div>
+                <img class="block" src="" alt="">
             </div>
         </div>
     </section>
