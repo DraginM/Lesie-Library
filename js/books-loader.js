@@ -34,17 +34,6 @@ function displayBooks(books) {
     });
 }
 
-// Сортировка по году (новые сверху)
-books.sort((a, b) => (b.year || 0) - (a.year || 0));
-
-// Фильтр по жанру
-const filtered = books.filter(book => book.genres?.includes('Роман'));
-
-// Поиск по названию
-const searched = books.filter(book => 
-    book.title.toLowerCase().includes(searchQuery.toLowerCase())
-);
-
 function openBookModal(book) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
@@ -68,5 +57,6 @@ function openBookModal(book) {
     `;
     document.body.appendChild(modal);
 }
+
 
 document.addEventListener('DOMContentLoaded', loadBooks);
