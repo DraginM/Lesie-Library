@@ -54,8 +54,8 @@
     border-radius: 8px; 
     border: 2px solid var(--prime);
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    z-index: 99; 
-    max-width: 500px; 
+    z-index: 50; 
+    max-width: 800px; 
     display: flex;
     flex-direction: column;
     gap: 24px;
